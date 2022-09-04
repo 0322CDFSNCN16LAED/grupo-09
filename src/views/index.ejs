@@ -1,151 +1,137 @@
-<!doctype html>
 <html lang="en">
-
-  <head>
-   <%-include ("./partials/head") %> 
-  </head>
-
-  <body>
-    <!-- <script src="js/accesibility.js"></script> -->
-    <header>
-      <%-include ("./partials/header") %> 
-    </header>
-
-    <main>
-      
-      <div class="container">
-        <div class="row header-carousel">
-        </div>
-        </div>
-        <div class="carousel-index">
- 
-         <div class="row">
-
-            <!-- <div class="col justDesktop"> <p class="text-desktop-btn"></i> Tu ubicación: Buenos Aires, Argentina <span class="fas fa-map-marked-alt"></span> |  Aprovechá 12 cuotas sin interés con tarjeta Mastercard  </p>
-            </div>  --> 
-            <div class="menuAccesibility row flex-nowrap "> 
-              <div class="acText1 col">A</div><div class="acText2 col">A</div><div class="acText3 col">A</div>
-              
-          </div>
-       
-          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="images/slider1.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="images/slider2.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="images/slider3.png" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-
-          <div class="row">
-            <div class="col"> <h2 class="font-heading">Elige tu próxima aventura</h2> </div>
-          </div>
-          <div class="row">
-            <div class="col"><img width="100%" src="/images/africa.svg" alt="Africa" /></div>
-            <div class="col"><img width="100%" src="/images/america.svg" alt="America" /></div>
-            <div class="col"><img width="100%" src="/images/asia.svg" alt="Asia" /></div>
-            <div class="col"><img width="100%" src="/images/oceania.svg" alt="Oceania" /></div>
-            <div class="col"><img width="100%" src="/images/europa.svg" alt="Europa" /></div>
-          </div>
-
-        
-      </div>
-        <div class="row">
-          <div class="col divisor-index-1">
-            <img src="images/logo-nobg.png" width="30%">
-            <h2>Experiencias inigualables, en todos los sentidos.</h2>
-            <p> Contratá hoy un tour guiado en Tripstarter </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col"> <h2 class="font-heading">Tours sugeridos</h2> </div>  
-        </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-2 filtros">
-               
-        <div id="mobile-filter">
- 
-  <div class="border-bottom pb-2 ml-2">
-      <h4 id="burgundy">Filtros</h4>
-  </div>
-  <div class="py-2 border-bottom ml-3">
-      <h6 class="font-weight-bold">Categorias</h6>
-        <form>
-          <div class="form-group"> <input type="checkbox" id="artisan"> <label for="artisan">Free Tour</label> </div>
-          <div class="form-group"> <input type="checkbox" id="breakfast"> <label for="breakfast">Guiado</label> </div>
-          <div class="form-group"> <input type="checkbox" id="healthy"> <label for="healthy">En oferta</label> </div>
-      </form>
-  </div>
-  <div class="py-2 border-bottom ml-3">
-      <h6 class="font-weight-bold">Continente</h6>
-       <form>
-          <div class="form-group"> <input type="checkbox" id="tea"> <label for="tea">América</label> </div>
-          <div class="form-group"> <input type="checkbox" id="cookies"> <label for="cookies">Europa</label> </div>
-          <div class="form-group"> <input type="checkbox" id="pastries"> <label for="pastries">Asia</label> </div>
-          <div class="form-group"> <input type="checkbox" id="dough"> <label for="dough">Africa</label> </div>
-          <div class="form-group"> <input type="checkbox" id="choco"> <label for="choco">Oceanía</label> </div>
-      </form>
-  </div>
-  <div class="py-2 ml-3">
-      <h6 class="font-weight-bold">Descuentos</h6>
-      <form>
-          <div class="form-group"> <input type="checkbox" id="25off"> <label for="25">25% off</label> </div>
-          <div class="form-group"> <input type="checkbox" id="5off"> <label for="5off" id="off">5% off </label> </div>
-      </form>
-  </div>
-</div>
-<!-- Sidebar filter section -->
-<section id="sidebar">
-
-              </div>
-              <div class="col-md-10">
-              <% products.forEach(product => {%>
-              <div class="col primaryTripCard pt-3">
-                <div class="p-3 border bg-light tripCard"> 
-                  <article>
-                    <div class="img-card">
-                      <img width="100%" src="/images/productsImages/<%= product.image %>" alt="<%= product.city %> " />
-                    </div>
-                    <!--ACA HAY QUE METER UN H1 CON EL PRODUCTO.NAME DE CADA TOUR PARA PONER EL TITULO
-                    , ASI SIRVE PERO APARECE MUY GRANDE; FALTA DARLE UN STYLE CON UN FONT SIZE MAS CHICO <h1>
-                      
-                    <%= product.name %> </h1> -->
-                        <p class="text-card"><%= product.description %> </p>  
-                          <button class="seeDetailsButton">
-                            <a href="/product/<%= product.id %>">
-                              <input class="seeDetailsInput" type="submit" value="Ver detalles"> 
-                            </a>
-                          </button>
-                  </article>
+    <head>
+        <%-include ("./partials/head") %> 
+    </head>
+    <body>
+        <!-- <script src="js/accesibility.js"></script> -->
+        <header>
+            <%-include ("./partials/header") %> 
+        </header>
+        <main>
+            <div class="container">
+                <div class="row header-carousel">
                 </div>
-              </div>
-              <% }); %>
-          
-              
             </div>
-          </div>
-                
-                
+            <div class="carousel-index">
+            <div class="row">
+                <!-- <div class="col justDesktop"> <p class="text-desktop-btn"></i> Tu ubicación: Buenos Aires, Argentina <span class="fas fa-map-marked-alt"></span> |  Aprovechá 12 cuotas sin interés con tarjeta Mastercard  </p>
+                    </div>  --> 
+                <div class="menuAccesibility row flex-nowrap ">
+                    <div class="acText1 col">A</div>
+                    <div class="acText2 col">A</div>
+                    <div class="acText3 col">A</div>
+                </div>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/slider1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/slider2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/slider3.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h2 class="font-heading">Elige tu próxima aventura</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col"><img width="100%" src="/images/africa.svg" alt="Africa" /></div>
+                    <div class="col"><img width="100%" src="/images/america.svg" alt="America" /></div>
+                    <div class="col"><img width="100%" src="/images/asia.svg" alt="Asia" /></div>
+                    <div class="col"><img width="100%" src="/images/oceania.svg" alt="Oceania" /></div>
+                    <div class="col"><img width="100%" src="/images/europa.svg" alt="Europa" /></div>
+                </div>
             </div>
-    </main>
-    <footer>
-      <%-include ("./partials/footer") %> 
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-  </body>
+            <div class="row">
+                <div class="col divisor-index-1">
+                    <img src="images/logo-nobg.png" width="30%">
+                    <h2>Experiencias inigualables, en todos los sentidos.</h2>
+                    <p> Contratá hoy un tour guiado en Tripstarter </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2 class="font-heading">Tours sugeridos</h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 filtros">
+                        <div id="mobile-filter">
+                            <div class="border-bottom pb-2 ml-2">
+                                <h4 id="burgundy">Filtros</h4>
+                            </div>
+                            <div class="py-2 border-bottom ml-3">
+                                <h6 class="font-weight-bold">Categorias</h6>
+                                <form>
+                                    <div class="form-group"> <input type="checkbox" id="artisan"> <label for="artisan">Free Tour</label> </div>
+                                    <div class="form-group"> <input type="checkbox" id="breakfast"> <label for="breakfast">Guiado</label> </div>
+                                    <div class="form-group"> <input type="checkbox" id="healthy"> <label for="healthy">En oferta</label> </div>
+                                </form>
+                            </div>
+                            <div class="py-2 border-bottom ml-3">
+                                <h6 class="font-weight-bold">Continente</h6>
+                                <form>
+                                    <div class="form-group"> <input type="checkbox" id="tea"> <label for="tea">América</label> </div>
+                                    <div class="form-group"> <input type="checkbox" id="cookies"> <label for="cookies">Europa</label> </div>
+                                    <div class="form-group"> <input type="checkbox" id="pastries"> <label for="pastries">Asia</label> </div>
+                                    <div class="form-group"> <input type="checkbox" id="dough"> <label for="dough">Africa</label> </div>
+                                    <div class="form-group"> <input type="checkbox" id="choco"> <label for="choco">Oceanía</label> </div>
+                                </form>
+                            </div>
+                            <div class="py-2 ml-3">
+                                <h6 class="font-weight-bold">Descuentos</h6>
+                                <form>
+                                    <div class="form-group"> <input type="checkbox" id="25off"> <label for="25">25% off</label> </div>
+                                    <div class="form-group"> <input type="checkbox" id="5off"> <label for="5off" id="off">5% off </label> </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Sidebar filter section -->
+                        <section id="sidebar">
+                    </div>
+                    <div class="col-md-10">
+                        <% products.forEach(product => {%>
+                        <div class="col primaryTripCard pt-3">
+                            <div class="p-3 border bg-light tripCard">
+                                <article>
+                                    <div class="img-card">
+                                        <img width="100%" src="/images/productsImages/<%= product.image %>" alt="<%= product.city %> " />
+                                    </div>
+                                    <!--ACA HAY QUE METER UN H1 CON EL PRODUCTO.NAME DE CADA TOUR PARA PONER EL TITULO
+                                        , ASI SIRVE PERO APARECE MUY GRANDE; FALTA DARLE UN STYLE CON UN FONT SIZE MAS CHICO <h1>
+                                          
+                                        <%= product.name %> </h1> -->
+                                    <p class="text-card"><%= product.description %> </p>
+                                    <button class="seeDetailsButton">
+                                    <a href="/product/<%= product.id %>">
+                                    <input class="seeDetailsInput" type="submit" value="Ver detalles"> 
+                                    </a>
+                                    </button>
+                                </article>
+                            </div>
+                        </div>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <%-include ("./partials/footer") %> 
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
 </html>

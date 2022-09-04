@@ -8,8 +8,8 @@
     </head>
     <body>
         <h1>
-            El producto que estás intentando eliminar es <%= tourBuscado.id +
-            tourBuscado.name %>
+            El producto que estás intentando eliminar es <%= tourBuscado.name
+            %>, ID numero <%= tourBuscado.id%>
         </h1>
         <form
             action="/products/delete/<%= tourBuscado.id %>?_method=delete"

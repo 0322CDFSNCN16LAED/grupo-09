@@ -1,86 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editando usuario</title>
-</head>
-<body>
-    <h2 class="">
-        Estás editando: <i><%= user.name+", "+"cuyo id es"+" "+user.id%> </i>
-    </h2>
-    <form
-    action="/edituser/<%= user.id %>?_method=PUT"
-    method="POST"
->
- 
-        <div class="">
-            <label for="name" class=""
-                >Nombre del usuario:</label
-            >
-            <input
-                value="<%= user.name %>"
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Ej: Pedro Alfonso"
-                class=""
-            />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Editando usuario</title>
+    </head>
+    <body>
+        <h2 class="">
+            Estás editando:
+            <i><%= user.name+", "+"cuyo id es"+" "+user.id%> </i>
+        </h2>
+        <form action="/edituser/<%= user.id %>?_method=PUT" method="POST">
+            <div class="">
+                <label for="name" class="">Nombre del usuario:</label>
+                <input
+                    value="<%= user.name %>"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Ej: Pedro Alfonso"
+                    class="" />
             </div>
             <div>
-                <label for="email" class=""
-                >Email:</label
-            >
-            <input
-                type="text"
-                id="email"
-                name="email"
-                value="<%= user.email %>"
-                class=""
-            />
+                <label for="email" class="">Email:</label>
+                <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    value="<%= user.email %>"
+                    class="" />
             </div>
             <div>
-                <label for="phoneNumber" class=""
-                >Número de contacto:</label
-            >
-            <input
-                type="text"
-                id="phoneNumber"
-                name="phoneNumber"
-                value="<%= user.celular %>"
-                class=""
-            />
+                <label for="phoneNumber" class="">Número de contacto:</label>
+                <input
+                    type="text"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    value="<%= user.celular %>"
+                    class="" />
             </div>
             <div>
-                <label for="password" class=""
-                >Password:</label
-            >
-            <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder=""
-                class=""
-            />
+                <label for="password" class="">Password:</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder=""
+                    class="" />
             </div>
             <div>
-                <label for="uploadFile" class=""
-                >Avatar:</label
-            >
-            <input
-                type="file"
-                id="uploadFile"
-                name="uploadFile"
-                placeholder=""
-                class=""
-            />
+                <label for="uploadFile" class="">Avatar:</label>
+                <input
+                    type="file"
+                    id="uploadFile"
+                    name="uploadFile"
+                    placeholder=""
+                    class="" />
             </div>
-            
-            
             <div>
-                <input type="submit" value="Editar">
+                <a href="/users/profile"
+                    ><input type="submit" value="Editar"
+                /></a>
             </div>
-            </form>
-</body>
+        </form>
+    </body>
 </html>

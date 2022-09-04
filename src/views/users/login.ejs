@@ -1,73 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%-include ("../partials/head") %>
-    <script src="/js/loginValidation.js"></script>
-  </head>
-  <body class="loginBody">
-
-    <header>
-      <%-include ("../partials/header") %>
-    </header>
-
-    <main>
-      <div class="container-xxl login-register">
-        <div class="row">
-          <div class="col login-logo">
-            <img src="/images/logo-nobg.png" />
-          </div>
-        </div>
-        <div class="row">
-          
-          <div class="col">
-            <section class="form-login">
-              <h5>Inicia sesión:</h5>
-              
-              <% if (locals.error) { %>
-                <div style="color: #ea0e0e">Algunos datos no son correctos</div>
-                <% } %>
-              
-              <form action="/users/login" method="POST"  class="userLogin" id="formulario">
-                <div>
-                <input
-                class="input-login"
-                type="email"
-                name="email"
-                placeholder="Ingresa tu email"
-                />
-                <span class="error"></span>
-              </div>
-              <div>
-              <input
-                class="input-login"
-                type="password"
-                name="password"
-                placeholder="Contraseña"
-              />  
-              <span class="error"></span>            
-              
-              </div>
-                
-              <input class="btn-login" type="submit" value="Ingresar" />
-              <p class="links" id="passLogin"><a href="/users/register">¿No tienes cuenta?, ¡Registrate!</a></p>
-          
-          </section>
-          </div>
-
-        </div>
-        
-      </div>
-      
-    </main>
-
-    <footer>
-      <%-include ("../partials/footer") %>
-    </footer>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+   <head>
+      <%-include ("../partials/head") %>
+      <script src="/js/loginValidation.js"></script>
+   </head>
+   <body class="loginBody">
+      <header>
+         <%-include ("../partials/header") %>
+      </header>
+      <main>
+         <div class="container-xxl login-register">
+            <div class="row">
+               <div class="col login-logo">
+                  <img src="/images/logo-nobg.png" />
+               </div>
+            </div>
+            <div class="row">
+               <div class="col">
+                  <section class="form-login">
+                     <h5>Inicia sesión:</h5>
+                     <% if (locals.error) { %>
+                     <div style="color: #ea0e0e">Algunos datos no son correctos</div>
+                     <% } %>
+                     <form action="/users/login" method="POST"  class="userLogin" id="formulario">
+                     <div>
+                        <input
+                           class="input-login"
+                           type="email"
+                           name="email"
+                           placeholder="Ingresa tu email"
+                           />
+                        <span class="error"></span>
+                     </div>
+                     <div>
+                        <input
+                           class="input-login"
+                           type="password"
+                           name="password"
+                           placeholder="Contraseña"
+                           />  
+                        <span class="error"></span>            
+                     </div>
+                     <input class="btn-login" type="submit" value="Ingresar" />
+                     <p class="links" id="passLogin"><a href="/users/register">¿No tienes cuenta?, ¡Registrate!</a></p>
+                  </section>
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer>
+         <%-include ("../partials/footer") %>
+      </footer>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+         crossorigin="anonymous"
+         ></script>
+   </body>
 </html>
