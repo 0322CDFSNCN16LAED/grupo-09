@@ -211,16 +211,13 @@
 /* ESTILOS FOOTER */
 
 .footer {
-    width: 100%;
-    background: #009459;
-    margin-top: 2.3em;
-    justify-content: space-between;
-    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
 }
-.footer div {
-    width: 100%;
-    padding: 1em;
 
+.footer div {
+    padding: 1em;
     text-align: center;
 }
 .footer h4 {
@@ -230,15 +227,62 @@
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
-.footer .payment-methods img {
-    width: 28%;
-    display: block;
-    margin: 4px auto;
+.contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+}
+.payment {
+    width: 33%;
+}
+.payment-methods {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.firsMethod {
+    width: 100px;
+}
+.secondMethod {
+    width: 100px;
+    margin-top: 2.5%;
+}
+.thirdMethod {
+    width: 100px;
 }
 
 .footer .partners a {
     display: block;
     margin-bottom: 6px;
+}
+.partners {
+    width: 33%;
+}
+.ourPartners {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.firsPartner {
+    width: 100px;
+}
+.secondPartner {
+    width: 100px;
+}
+.thirdPartner {
+    width: 100px;
+}
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+    }
 }
 
 /* FIN ESTILOS FOOTER */

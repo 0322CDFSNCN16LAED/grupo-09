@@ -247,14 +247,8 @@ body {
     width: 100%;
     background: #009459;
     margin-top: 2.3em;
-    justify-content: space-between;
+    justify-content: space-around;
     color: #fff;
-}
-.footer div {
-    width: 100%;
-    padding: 1em;
-
-    text-align: center;
 }
 .footer h4 {
     margin-bottom: 1em;
@@ -263,19 +257,10 @@ body {
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
-.footer .payment-methods img {
-    width: 28%;
-    display: block;
-    margin: 4px auto;
-}
 
 .footer .partners a {
     display: block;
     margin-bottom: 6px;
-}
-.row {
-    --bs-gutter-x: none;
-    justify-content: center;
 }
 
 /* FIN ESTILOS FOOTER */
@@ -471,7 +456,7 @@ h1 {
 }
 .cart-total p {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 1.875rem;
     font-size: 1.25rem;
 }

@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
     <%-include ("../partials/head") %>
-  <script src="/js/loginValidation.js"></script>
-    
+    <script src="/js/loginValidation.js"></script>
   </head>
   <body class="loginBody">
 
-    <header><%-include ("../partials/header") %></header>
+    <header>
+      <%-include ("../partials/header") %>
+    </header>
 
     <main>
       <div class="container-xxl login-register">
@@ -49,16 +50,19 @@
                 
               <input class="btn-login" type="submit" value="Ingresar" />
               <p class="links" id="passLogin"><a href="/users/register">¿No tienes cuenta?, ¡Registrate!</a></p>
-           
-            </section>
+          
+          </section>
           </div>
 
         </div>
         
       </div>
+      
     </main>
 
-    <footer class="footer row"><%-include ("../partials/footer") %></footer>
+    <footer>
+      <%-include ("../partials/footer") %>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

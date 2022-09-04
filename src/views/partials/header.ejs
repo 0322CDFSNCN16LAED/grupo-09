@@ -24,9 +24,18 @@
                     Mis tours<i class="fas fa-shopping-basket"></i
                 ></a>
             </li>
-
-            <!-- <div><a href="<%= locals.loggedUser.id %>" class="nav-link justDesktopViewButton">Mis Tours <i class="fas fa-shopping-basket"></i></a></div> -->
-
+            <div>
+                <a
+                    href="/product/products"
+                    class="nav-link justDesktopViewButton"
+                    >Tours</a
+                >
+            </div>
+            <div>
+                <a class="nav-link justDesktopViewButton" href="/users/logout/"
+                    >Cerrar sesión</a
+                >
+            </div>
             <% } else { %>
             <div>
                 <a
@@ -46,12 +55,8 @@
                 >
             </div>
             <% } %>
-            <div>
-                <a class="nav-link justDesktopViewButton" href="/users/logout/"
-                    >Cerrar sesión</a
-                >
-            </div>
         </div>
+
         <button
             class="navbar-toggler"
             type="button"
@@ -83,6 +88,26 @@
                             >Inicio</a
                         >
                     </li>
+
+                    <% if (locals.loggedUser) { %>
+                    <li class="nav-item">
+                        <a href="/product/products" class="nav-link">Tours</a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="nav-link" href="/users/profile">Mi Panel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/product/productcart">
+                            Mis tours <i class="fas fa-shopping-basket"></i
+                        ></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/logout/"
+                            >Cerrar sesión</a
+                        >
+                    </li>
+                    <% } else { %>
                     <li class="nav-item">
                         <a href="/product/products" class="nav-link">Tours</a>
                     </li>
@@ -96,26 +121,9 @@
                             >Regístrate</a
                         >
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/users/logout/"
-                            >Cerrar sesión</a
-                        >
-                    </li>
+
+                    <% } %>
                 </ul>
-                <div class="reallyWhereToGo">
-                    <form class="d-flex" role="search">
-                        <input
-                            class="form-control me-2 whereToGo"
-                            type="search"
-                            placeholder="¿A dónde te gustaría ir?"
-                            aria-label="Search" />
-                        <button
-                            class="btn btn-outline-success whereToGoSubmit"
-                            type="submit">
-                            Buscar
-                        </button>
-                    </form>
-                </div>
             </div>
         </div>
     </div>
