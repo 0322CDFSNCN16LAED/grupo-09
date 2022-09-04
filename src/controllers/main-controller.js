@@ -1,5 +1,10 @@
 module.exports = {
     admin: (req, res) => {
-        res.render("./product/adminpanel")
+        
+        if(req.session.loggedUser.email == "dimaria@gmail.com") {
+            res.render("./product/adminpanel")
+            console.log("iupi");
+        }
+        console.log("no tenes permiso")
     },
 }

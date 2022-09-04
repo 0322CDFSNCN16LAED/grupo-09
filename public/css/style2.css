@@ -21,7 +21,7 @@
 
 /* NAVBAR */
 .navbar {
-    background-color: #009459;
+    background-color: #4e4d4d;
     opacity: 0.8;
 }
 
@@ -108,7 +108,7 @@
 
 /* ESTILOS FORMULARIO LOGIN REGISTRO*/
 .loginBody {
-    background-color: #009459;
+    background-color: #eae8e8;
 }
 .login-logo {
     text-align: center;
@@ -119,7 +119,7 @@
 
 .login-register {
     margin-top: 77px;
-    background: url("/images/bg-login-1.jpg");
+    background: url("/images/fondolog.png");
 }
 
 .form-login {
@@ -307,9 +307,9 @@
 }
 
 .justDesktopViewButton {
-    background-color: white; /* Green */
+    background-color: #4e4d4d; /* Green */
     border: none;
-    color: #009459;
+    color: #ffffff;
     padding: 8px 32px;
 
     text-align: center;
