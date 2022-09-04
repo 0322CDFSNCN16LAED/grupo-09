@@ -21,7 +21,7 @@
 
 /* NAVBAR */
 .navbar {
-    background-color: #009459;
+    background-color: #4e4d4d;
     opacity: 0.8;
 }
 
@@ -263,9 +263,9 @@
 }
 
 .justDesktopViewButton {
-    background-color: white; /* Green */
+    background-color: #4e4d4d; /* Green */
     border: none;
-    color: #009459;
+    color: #ffffff;
     padding: 8px 32px;
 
     text-align: center;
