@@ -4,26 +4,29 @@ const sequelize = db.sequelize
 const { Op } = require("sequelize")
 
 const usersAPIcontroller = {
-    list: (req, res) => {
-        db.Users.findAll().then((user) => {
+    list: async (req, res) => {
+        const {count, rows} = await db.Users.findAndCountAll()
+
             let respuesta = {
                 meta: {
                     status: 200,
                     total: usersAPIcontroller.length,
                     url: "api/users",
                 },
-                data: {
-                    users: [
-                        (id = user.id),
-                        (name = user.name),
-                        (email = user.email),
-                        (detail = `api/users/${user.id} `),
-                    ],
-                    count: db.Users.count(),
-                },
+                users : rows.map((user)=>{
+                    return {
+                        name : user.name,
+                        id : user.id,
+                        email: user.email,
+                        detail: `api/users/${user.id}`
+                        /*FALTA UNA URL PARA MOSTRAR LA IMAGEN DEL PERFIL */
+                    }
+                }),
+                count : count
+               
             }
             res.json(respuesta)
-        })
+       
     },
     detail: (req, res) => {
         db.Users.findByPk(req.params.id).then((user) => {
@@ -34,11 +37,11 @@ const usersAPIcontroller = {
                     url: "/api/user/:id",
                 },
                 data: {
-                    id: user.id,
-                    name: user.name,
+                    name : user.name,
+                    id : user.id,
                     email: user.email,
-                    celular: user.celular,
-                    /*FALTA UNA PROPIEDAD QUE TRAIGA UNA URL PARA ACCEDER AL AVATAR DEL USUARIO */
+                    phoneNumber : user.celular,
+                    detail: `api/users/${user.id}`
                 },
             }
             res.json(respuesta)

@@ -3,6 +3,6 @@ const router = express.Router()
 const usersAPIController = require("../../controllers/api/usersAPIController")
 const { route } = require("./products")
 
-router.get("/api/users", usersAPIController.list)
-router.get("api/users/:id", usersAPIController.detail)
+router.get("/", usersAPIController.list)
+router.get("/:id", usersAPIController.detail)
 module.exports = router
