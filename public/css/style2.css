@@ -108,7 +108,7 @@
 
 /* ESTILOS FORMULARIO LOGIN REGISTRO*/
 .loginBody {
-    background-color: #009459;
+    background-color: #eae8e8;
 }
 .login-logo {
     text-align: center;
@@ -119,7 +119,7 @@
 
 .login-register {
     margin-top: 77px;
-    background: url("/images/bg-login-1.jpg");
+    background: url("/images/fondolog.png");
 }
 
 .form-login {
