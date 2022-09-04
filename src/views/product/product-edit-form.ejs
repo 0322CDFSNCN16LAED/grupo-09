@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h2 class="">Estás editando: <i><%= product.name %> </i></h2>
+        <form
+            action="/products/edit/<%= product.id %>?_method=PUT"
+            method="POST">
+            <div class="">
+                <label for="name" class="">Nombre del producto:</label>
+                <input
+                    value="<%= product.name %>"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Ej: Zapatillas Reebok"
+                    class="" />
+            </div>
+            <div>
+                <label for="price" class="">Precio del producto:</label>
+                <input
+                    value="<%= product.price %>"
+                    type="text"
+                    id="price"
+                    name="price"
+                    placeholder="Ej: 23243 "
+                    class="" />
+            </div>
+            <div>
+                <label for="discount" class="">Descuento del producto:</label>
+                <input
+                    value="<%= product.discount %>"
+                    type="text"
+                    id="discount"
+                    name="discount"
+                    placeholder="Ej: 5 "
+                    class="" />
+            </div>
+            <div>
+                <label for="description" class=""
+                    >Descripcion del producto:</label
+                >
+                <input
+                    value="<%= product.description %>"
+                    type="text"
+                    id="description"
+                    name="description"
+                    placeholder="Describe el tour "
+                    class="" />
+            </div>
+            <div>
+                <label for="opinions" class="">Opiniones del producto:</label>
+                <input
+                    value="<%= product.opinions %>"
+                    type="number"
+                    id="opinions"
+                    name="opinions"
+                    placeholder=""
+                    class="" />
+            </div>
+            <div>
+                <label for="rate" class="">Puntuacion del tour:</label>
+                <input
+                    value="<%= product.rate %>"
+                    type="tel"
+                    id="rate"
+                    name="rate"
+                    placeholder=""
+                    class="" />
+            </div>
+
+            <div>
+                <label for="city" class="">Ciudad del tour:</label>
+                <input
+                    value="<%=product.city%>"
+                    type="Text"
+                    id="city"
+                    name="city"
+                    placeholder="Indica la ciudad del tour"
+                    class="" />
+            </div>
+            <input href="/index" type="submit" value="Editar" />
+        </form>
+    </body>
+</html>

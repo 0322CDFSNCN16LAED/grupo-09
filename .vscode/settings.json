@@ -1,0 +1,4 @@
+// guarda el archivo al salir de este y asi activar prettier
+{
+    "files.autoSave": "onFocusChange"
+}

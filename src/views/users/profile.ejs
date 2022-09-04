@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mi Panel</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous" />
+        <%-include ("../partials/head") %>
+    </head>
+    <body>
+        <header><%-include ("../partials/header") %></header>
+        <link href="narrow-jumbotron.css" rel="stylesheet" />
+
+        <div class="container myprofile">
+            <div class="header clearfix">
+                <nav>
+                    <ul class="nav nav-pills float-right">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/profile"
+                                >Datos <span class="sr-only">(current)</span></a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Modificar datos</a>
+                        </li>
+                        <li class="nav-item"></li>
+                    </ul>
+                </nav>
+                <h3 class="text-muted">Mi Perfil<br /></h3>
+                <img
+                    src="/images/profile-images/<%= locals.loggedUser.avatar%> "
+                    width="128"
+                    height="128" />
+                <div
+                    class="alert alert-warning alert-dismissible fade show alerta"
+                    role="alert"
+                    style="font-weight: 300">
+                    <button
+                        type="button"
+                        class="close"
+                        data-dismiss="alert"
+                        aria-label="Close">
+                        <span aria-hidden="true">×</span>&nbsp;</button
+                    >Atención!, Debe actualizar el medio de pago. Click Aquí
+                </div>
+            </div>
+
+            <div class="row marketing">
+                <div class="col-lg-6">
+                    <h4>Nombre</h4>
+                    <p><%= locals.loggedUser.name %></p>
+
+                    <h4>Password<br /></h4>
+                    <p>* * * * * *</p>
+
+                    <h4>Contacto de emergencia<br /></h4>
+                    <p>Agregar contacto de emergencia.</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <h4>Email</h4>
+                    <p><%= locals.loggedUser.email %></p>
+
+                    <h4>Contacto</h4>
+                    <p><%= locals.loggedUser.phoneNumber %></p>
+                </div>
+            </div>
+        </div>
+        <!-- /container -->
+    </body>
+</html>

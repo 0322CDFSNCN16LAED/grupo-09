@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%-include ("../partials/head") %>
+    </head>
+    <title>Admin Panel</title>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <h1>Admin Panel</h1>
+            </div>
+            <div class="row">
+                <h2>Productos / Tours</h2>
+            </div>
+            <div class="row cards-admin-products">
+                <div class="card" style="width: 18rem">
+                    <img
+                        src="https://i.ibb.co/C2n61T4/add.png"
+                        class="card-img-top"
+                        alt="...1" />
+                    <div class="card-body">
+                        <h5 class="card-title">Agregar nuevo tour</h5>
+                        <p class="card-text">
+                            Acá podrás añadir nuevos tours completando el
+                            formulario
+                        </p>
+                        <a href="formulario" class="btn btn-primary"> Click</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem">
+                    <img
+                        src="https://i.ibb.co/D5Xsxh8/modify.png"
+                        class="card-img-top"
+                        alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Editar tour</h5>
+                        <p class="card-text">
+                            Acá podrás editar los tours ya creados.
+                        </p>
+                        <a
+                            href="../product/product-edit-form"
+                            class="btn btn-primary"
+                            >Click</a
+                        >
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem">
+                    <img
+                        src="https://i.ibb.co/TmJ8kYJ/delete.png"
+                        class="card-img-top"
+                        alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Eliminar tour</h5>
+                        <p class="card-text">
+                            Eliminar tours ya creados de la lista.
+                        </p>
+                        <a href="#" class="btn btn-primary">Click</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h2>Usuarios</h2>
+            </div>
+            <div class="row cards-admin-users">
+                <div class="card" style="width: 18rem">
+                    <img
+                        src="https://i.ibb.co/KVPSpPd/useradd.png"
+                        class="card-img-top"
+                        alt="...1" />
+                    <div class="card-body">
+                        <h5 class="card-title">Listar usuarios</h5>
+                        <p class="card-text">Lista de usuarios activos.</p>
+                        <a href="../products/formulario" class="btn btn-primary"
+                            >Click</a
+                        >
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem">
+                    <img
+                        src="https://i.ibb.co/t4KB5XD/usermod.png"
+                        class="card-img-top"
+                        alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Editar usuario</h5>
+                        <p class="card-text">
+                            Acá podrás editar los usuarios activos.
+                        </p>
+                        <a href="#" class="btn btn-primary">Click</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem">
+                    <img
+                        src="https://i.ibb.co/JyC7JCS/userdelete.png"
+                        class="card-img-top"
+                        alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Eliminar usuario</h5>
+                        <p class="card-text">
+                            Eliminar usuarios ya creados de la lista.
+                        </p>
+                        <a href="#" class="btn btn-primary">Click</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

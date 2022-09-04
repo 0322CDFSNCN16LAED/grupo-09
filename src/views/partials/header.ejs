@@ -1,0 +1,122 @@
+<nav class="navbar fixed-top">
+    <div class="container-fluid unodostres">
+        <a class="navbar-brand" href="/"
+            ><div class="img-navbar">
+                <img src="/images/logo-nobg.png" width="100%" /></div
+        ></a>
+
+        <div class="justDesktopView">
+            <div class="nav-item">
+                <a
+                    class="nav-link active justDesktopViewButton"
+                    aria-current="page"
+                    href="/"
+                    >Inicio</a
+                >
+            </div>
+
+            <% if (locals.loggedUser) { %>
+            <li class="nav-link justDesktopViewButton">
+                <a class="nav-link" href="/users/profile">Mi Panel</a>
+            </li>
+            <li class="nav-link justDesktopViewButton">
+                <a class="nav-link" href="/product/productcart">
+                    Mis tours<i class="fas fa-shopping-basket"></i
+                ></a>
+            </li>
+
+            <!-- <div><a href="<%= locals.loggedUser.id %>" class="nav-link justDesktopViewButton">Mis Tours <i class="fas fa-shopping-basket"></i></a></div> -->
+
+            <% } else { %>
+            <div>
+                <a
+                    href="/product/products"
+                    class="nav-link justDesktopViewButton"
+                    >Tours</a
+                >
+            </div>
+            <div>
+                <a class="nav-link justDesktopViewButton" href="/users/login"
+                    >Inicia sesión</a
+                >
+            </div>
+            <div>
+                <a class="nav-link justDesktopViewButton" href="/users/register"
+                    >Regístrate</a
+                >
+            </div>
+            <% } %>
+            <div>
+                <a class="nav-link justDesktopViewButton" href="/users/logout/"
+                    >Cerrar sesión</a
+                >
+            </div>
+        </div>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                    Trip Stater
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/"
+                            >Inicio</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="/product/products" class="nav-link">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/login"
+                            >Inicia sesión</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/register"
+                            >Regístrate</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/logout/"
+                            >Cerrar sesión</a
+                        >
+                    </li>
+                </ul>
+                <div class="reallyWhereToGo">
+                    <form class="d-flex" role="search">
+                        <input
+                            class="form-control me-2 whereToGo"
+                            type="search"
+                            placeholder="¿A dónde te gustaría ir?"
+                            aria-label="Search" />
+                        <button
+                            class="btn btn-outline-success whereToGoSubmit"
+                            type="submit">
+                            Buscar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

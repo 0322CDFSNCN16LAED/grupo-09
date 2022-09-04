@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head") %>
+  </head>
+  <body  class="formularioAdminBody">
+    <main>
+      <div class="container-xxl login-register admin">
+        <div class="rowAdminForm">
+          <div class="col login-logo admin">
+            <img src="/images/logo-nobg.png" />
+          </div>
+        </div>
+        <div class="row adminRow">
+            <section class="formulario form-login adminForm ">
+              <h5>Nuevo tour</h5>
+              
+              <form method="POST" action="/product/formulario" enctype="multipart/form-data">
+              <label>Seleccionar una imagen para el tour:</label>
+              <input
+                class="input-login"
+                type="file"
+                name="image"
+                accept=".jpg"
+                multiple
+              />
+              
+              <input
+                class="input-login"
+                type="text"
+                name="name"
+                placeholder="Titulo del tour"
+              />
+              <% if (locals.errors && errors.name) { %>
+                <p  style="color: white"><%= errors.name.msg %></p>
+                <% } %>  
+                 
+              <input
+                class="input-login"
+                type="text"
+                name="description"
+                placeholder="Descripcion del tour"
+              />
+                
+              
+              <input
+              class="input-login"
+              type="tel"
+              name="opinions"
+              placeholder="Cantidad de opiniones"
+              />
+              <% if (locals.errors && errors.opinions) { %>
+                <p  style="color: white"><%= errors.opinions.msg %></p>
+                <% } %> 
+                
+              <input
+                class="input-login"
+                type="tel"
+                name="rate"
+                placeholder="Promedio de puntuacion del tour"
+              />
+              <% if (locals.errors && errors.rate) { %>
+                <p  style="color: white"><%= errors.rate.msg %></p>
+                <% } %> 
+              <input
+              class="input-login"
+              type="text"
+              name="country"
+              placeholder="Pais del tour"
+            />
+            <% if (locals.errors && errors.country) { %>
+              <p  style="color: white"><%= errors.country.msg %></p>
+              <% } %>  
+              
+              <input
+              class="input-login"
+              type="text"
+              name="city"
+              placeholder="Ciudad del tour"
+            />
+            <% if (locals.errors && errors.city) { %>
+              <p  style="color: white"><%= errors.city.msg %></p>
+              <% } %>  
+
+
+              <input
+              class="input-login"
+              type="text"
+              name="continent"
+              placeholder="Continente del tour"
+            />
+            <% if (locals.errors && errors.continent) { %>
+              <p  style="color: white"><%= errors.continent.msg %></p>
+              <% } %>  
+              
+              <input
+                class="input-login"
+                type="number"
+                name="price"
+                placeholder="Precio"
+              />
+                
+              <input
+                class="input-login"
+                type="number"
+                name="discount"
+                placeholder="Descuento"
+              />
+               
+  
+              <input class="btn-login" type="submit" value="Agregar tour" />
+              </form>
+            </section>
+      </div>
+      <div class="justMakeSpaceBro"></div>
+    </main>
+    <!-- <footer class="footer row"%-include ("./partials/footer") %> /footer> -->
+
+  </body>
+</html>

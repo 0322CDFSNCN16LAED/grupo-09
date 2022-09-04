@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%-include ("../partials/head") %>
+    </head>
+    <body>
+        <header><%-include("../partials/header")%></header>
+        <main class="productsMain">
+            <div class="container products-wrapper">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="products-title">Todos nuestros tours</h2>
+                    </div>
+                    <% products.forEach(product => { %>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="justBorder">
+                            <section class="product-box">
+                                <a
+                                    class="product-box"
+                                    href="/product/<%= product.id %> ">
+                                    <figure class="product-box_image">
+                                        <img
+                                            class="productImage"
+                                            src="/images/productsImages/<%=product.image %>"
+                                            alt="imagen de producto" />
+                                    </figure>
+                                    <article class="productBoxData">
+                                        <div class="priceAndDisccount">
+                                            <div class="productPrice">
+                                                <h2>
+                                                    $<%= product.price * (100 -
+                                                    product.discount) /100 %>
+                                                </h2>
+                                            </div>
+                                            <div class="productDisccount">
+                                                <span>
+                                                    <%= product.discount %>%
+                                                    OFF</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div class="productName">
+                                            <p class="productName2">
+                                                <%= product.name %>
+                                            </p>
+                                        </div>
+                                    </article>
+                                </a>
+                            </section>
+                        </div>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+        </main>
+        <!-- /todos los productos -->
+
+        <footer class="footer row align-items-center">
+            <%-include ("../partials/footer") %>
+        </footer>
+    </body>
+</html>
