@@ -661,7 +661,9 @@ h1 {
 /* PRODUCTS */
 .productsMain {
     text-align: center;
-    margin-top: 16vh;
+    margin-top: 80px;
+    padding-top: 40px;
+    background-color: #eae8e8;
 }
 .justBorder {
     border-radius: 20px;
