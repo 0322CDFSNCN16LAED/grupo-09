@@ -643,6 +643,10 @@ h1 {
 /* FIN NOT FOUND */
 
 /* PRODUCTS */
+.productsBody {
+    background-color: #eae8e8;
+}
+
 .productsMain {
     text-align: center;
     margin-top: 80px;

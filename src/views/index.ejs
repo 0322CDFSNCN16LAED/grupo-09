@@ -103,19 +103,21 @@
                         <!-- Sidebar filter section -->
                         <section id="sidebar">
                     </div>
+
+
                     <div class="col-md-10">
                         <% products.forEach(product => {%>
                         <div class="col primaryTripCard pt-3">
                             <div class="p-3 border bg-light tripCard">
                                 <article>
                                     <div class="img-card">
-                                        <img width="100%" src="/images/productsImages/<%= product.image %>" alt="<%= product.city %> " />
+                                        <img height="fit-content" src="/images/productsImages/<%= product.image %>" alt="<%= product.city %> " />
                                     </div>
                                     <!--ACA HAY QUE METER UN H1 CON EL PRODUCTO.NAME DE CADA TOUR PARA PONER EL TITULO
                                         , ASI SIRVE PERO APARECE MUY GRANDE; FALTA DARLE UN STYLE CON UN FONT SIZE MAS CHICO <h1>
                                           
                                         <%= product.name %> </h1> -->
-                                    <p class="text-card"><%= product.description %> </p>
+                                    <p height="fit-content" class="text-card"><%= product.description %> </p>
                                     <button class="seeDetailsButton">
                                     <a href="/product/<%= product.id %>">
                                     <input class="seeDetailsInput" type="submit" value="Ver detalles"> 
@@ -126,6 +128,8 @@
                         </div>
                         <% }); %>
                     </div>
+
+
                 </div>
             </div>
         </main>
