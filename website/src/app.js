@@ -3,10 +3,14 @@ const express = require("express")
 const methodOverride = require("method-override")
 const userAuth = require("./middlewares/user-auth")
 const session = require("express-session")
-
 const app = express()
+const cors = require("cors");
 
-const PORT = 3000
+
+app.use(cors(["localhost:3000"]));
+
+
+const PORT = 3001
 app.listen(PORT, () => {
     console.log("Estamos corriendo en el puerto " + PORT)
 })

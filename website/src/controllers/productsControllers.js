@@ -109,7 +109,7 @@ const controllers = {
                 id: id,
             },
         }).then((p) => {
-            res.redirect("/products")
+            res.redirect("/product/products")
         })
     },
 

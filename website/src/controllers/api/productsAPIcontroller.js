@@ -15,7 +15,7 @@ const productsAPIcontroller = {
                 },
                 products : rows.map((product)=>{
                     return {
-                        product
+                       ...product.toJSON()
                     }
                 }),
                 count : {count}

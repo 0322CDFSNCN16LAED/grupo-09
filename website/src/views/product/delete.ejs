@@ -12,7 +12,7 @@
             %>, ID numero <%= tourBuscado.id%>
         </h1>
         <form
-            action="/products/delete/<%= tourBuscado.id %>?_method=delete"
+            action="/product/delete/<%= tourBuscado.id %>?_method=delete"
             method="post">
             <input type="text" name="id" value="<%= tourBuscado.id %> " />
             <input type="submit" value="eliminar" />

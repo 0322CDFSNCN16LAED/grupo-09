@@ -1,6 +1,7 @@
 import GenresInDb from "./genres/GenresInDb";
 import MiniCard from "./MiniCard";
-import UltimoTour from "./UltimoTour";
+import ToursInDb from "./tours/ToursInDb";
+import UltimoTour from "./tours/UltimoTour";
 
 const miniCards = [
     {
@@ -44,12 +45,13 @@ export default function Dashboard() {
 
             {/* <!-- Content Row Last Movie in Data Base --> */}
             <div className="row">
-                {/* <!-- Last Movie in DB --> */}
+                {/* <!-- Ultimo tour creado --> */}
                 <UltimoTour />
-                {/* <!-- End content row last movie in Data Base --> */}
+                {/* <!-- Fin ultimo tour creado --> */}
 
                 {/* <!-- Genres in DB --> */}
-                <GenresInDb />
+                
+                <ToursInDb />
             </div>
         </>
     );
