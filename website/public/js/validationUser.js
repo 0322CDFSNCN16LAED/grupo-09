@@ -43,11 +43,7 @@ const validations = [
             {
                 validator: isEmpty,
                 errorMsg: "1-Debes confirmar tu contraseña",
-            },
-            {
-                validator: (input) => input.value !== password.input.value,
-                errorMsg: "1-Deben coincidir las contraseñas",
-            },
+            },            
         ],
     },
 ]
