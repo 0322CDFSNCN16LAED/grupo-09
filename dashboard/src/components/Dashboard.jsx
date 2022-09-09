@@ -1,3 +1,4 @@
+
 import GenresInDb from "./genres/GenresInDb";
 import MiniCard from "./MiniCard";
 import ToursInDb from "./tours/ToursInDb";
@@ -50,7 +51,7 @@ export default function Dashboard() {
                 {/* <!-- Fin ultimo tour creado --> */}
 
                 {/* <!-- Genres in DB --> */}
-                
+              
                 <ToursInDb />
             </div>
         </>
