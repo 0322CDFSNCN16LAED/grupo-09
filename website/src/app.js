@@ -36,13 +36,18 @@ const productRoutes = require("./routes/productRoutes.js")
 const usersRoutes = require("./routes/usersRoutes.js")
 const usersAPIroutes = require("./routes/api/users")
 const productsAPIroutes = require("./routes/api/products")
+const categoriesAPIroutes = require("./routes/api/categories")
+
+const { appendFile } = require("fs")
 app.use(userAuth)
 
 app.use("/", mainRoutes)
 app.use("/product", productRoutes)
 app.use("/users", usersRoutes)
+
 app.use("/api/users", usersAPIroutes)
 app.use("/api/products", productsAPIroutes)
+app.use("/api/categories", categoriesAPIroutes)
 
 app.use((req, res, next) => {
     res.status(404).render("not-found")
