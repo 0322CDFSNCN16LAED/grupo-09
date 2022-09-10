@@ -2,15 +2,15 @@ import React, {useEffect, useState} from 'react'
 
 
 
-function ProductMiniCards() {
+function UsersMiniCards() {
 
-    const [productos, setProductos] = useState([])
+    const [users, setUsers] = useState([])
     const fetchData = async ()=> {
-        const data = await fetch('http://localhost:3001/api/products')
+        const data = await fetch('http://localhost:3001/api/users')
         const products = await data.json()
-        const arrayProducts = products.products
+        const arrayUsers = products.users
         //console.log(products)
-        setProductos(arrayProducts)
+        setUsers(arrayUsers)
     }
 
 
@@ -19,7 +19,7 @@ function ProductMiniCards() {
         fetchData()
     }, [])
 
-    if(!productos) {
+    if(!users) {
         return <div>Cargando...</div>
     }
 
@@ -28,9 +28,9 @@ function ProductMiniCards() {
 
     return(
         <>
-        {productos.length}
+        {users.length}
         </>
     )
 }
 
-export default ProductMiniCards;
+export default UsersMiniCards;

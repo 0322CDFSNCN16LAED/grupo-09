@@ -2,8 +2,8 @@ import MiniCard from "./MiniCard";
 import ToursInDb from "./tours/ToursInDb";
 import UltimoTour from "./tours/UltimoTour";
 import ProductsMiniCards from "./ProductMiniCards";
-
-
+import UsersMiniCards from "./UsersMiniCards";
+import CategoriesMiniCards from "./CategoriesMiniCards";
 const miniCards = [
     {
         id: "5",
@@ -16,14 +16,14 @@ const miniCards = [
         id: "24",
         title: "Total de usuarios",
         color: "success",
-        value: "79",
+        value: <UsersMiniCards />,
         icon: "fa-award",
     },
     {
         id: "32",
         title: "Total de categorias",
         color: "success",
-        value: "49",
+        value: <CategoriesMiniCards />,
         icon: "fa-user",
     },
 ];

@@ -33,7 +33,7 @@ const categoriesAPIcontroller = {
                     total: categoriesAPIcontroller.length,
                     url: "api/categories",
                 },
-                categories : {europa, america, africa, asia, oceania},
+                categories : [europa, america, africa, asia, oceania],
                 count : {count}
                
             }
