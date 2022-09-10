@@ -11,22 +11,25 @@
                 <img src="/images/logo-nobg.png" alt="logo">
                 </section> -->
             <section class="product-detail container-xxl login-register">
-                <div class="img-container">
+                <div class="img-container" style="padding: 1%;">
                 <h2 id="tourName"><%= tour.name %></h2>
-                <div class="img-card" >
-                    <img width="80%" src="/images/productsImages/<%= tour.image %>" alt="<%= tour.city %> " />
-                </div           >
-                <div              class="product-description div">
-                    <p class="description"> <%= tour.description %> </p>
+                <div class="img-card-detail" >
+                    <img src="/images/productsImages/<%= tour.image %>" alt="<%= tour.city %> " />
+                </div>
+                <div class="product-description div">
+                    <p> <%= tour.description %> </p>
                 </div>
                 <div class="product-price div">
-                    <h3>$<%= tour.price %> ARS</h3>
+                    <h3>$ <%= tour.price %>.- ARS</h3>
                 </div>
                 <div class="button-container div">
                     <button type="submit" class="buttonProductOption buttonProductOptionColor buttonProductHover">Agregar al carrito</button>
                     <button type="submit" class="buttonProductOption buttonProductOptionColor buttonProductHover">Comprar</button>
                 </div>
+            </div>
             </section>
+
+
             <div class="row-test opinions">
                 <div class="col-test">
                     <span class="heading">Opiniones del tour</span>

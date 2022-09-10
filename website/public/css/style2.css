@@ -698,6 +698,12 @@ h1 {
     background-color: rgb(177, 59, 59);
     font-weight: 600;
 }
+.products-title{
+    font-weight: bolder;
+    background-color: #011f38;
+    color: #ffffff;
+    padding: 10px;
+}
 
 @media (max-width: 900px) {
     .product {
@@ -853,12 +859,18 @@ h1 {
     display: flex;
     flex-direction: column;
     padding-top: 2em;
+    height: auto;
+    
 }
 
 /*div de la Imagen del producto*/
 .product-detail .img-container {
     display: flex;
     flex-direction: column;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    filter: drop-shadow(8px 8px 15px #000);
 }
 .product-detail .img-container h2 {
     margin-bottom: 1em;
@@ -866,6 +878,9 @@ h1 {
 #tourName {
     color: #212529;
     font-size: 34px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
 }
 .product-detail .img-container img {
     margin: auto;
@@ -876,15 +891,17 @@ h1 {
 /*Div del detalle del producto*/
 main .product-description {
     margin-top: 1.5em;
-    width: 90%;
-    align-self: center;
+    width: 100%;
+    align-self: left;
 }
 .product-description p {
-    width: 90%;
+    width: 100%;
     margin: auto;
-    background-color: #dee2e6;
+    text-align: center;
+    background-color: #4caf50;
     border-radius: 7px;
     padding: 6%;
+    color: #ffffff;
 }
 
 .buttonProductOption {
@@ -922,6 +939,10 @@ main .product-description {
         width: 80%;
         margin: 1% 10% 1% 10%;
     }
+    .img-card-detail {
+        width: 100%;
+        margin: 1% 10% 1% 10%;
+    }
     .product-description p {
         padding: 2%;
     }
@@ -932,12 +953,8 @@ main .product-description {
 }
 .product-price {
     margin-top: 1em;
-    width: 30%;
-    padding-left: 0.5em;
-}
-.product-price h3 {
-    padding-left: 1em;
-    width: 30%;
+    color: #ffffff;
+
 }
 
 /*Botones*/
@@ -952,10 +969,12 @@ main .product-description {
     border-radius: 4px;
 }
 .product-price h3 {
-    margin: 3%;
-    background-color: #dee2e6;
+    background-color: #011f38;
     border-radius: 7px;
     padding: 6%;
+    width: 100%;
+    margin: auto;
+    text-align: center;
 }
 
 /*Media queries*/
@@ -969,24 +988,33 @@ main .product-description {
 
 @media (max-width: 475px) {
     .product-price h3 {
-        padding-left: 1em;
         margin: 3%;
-        width: 45vw;
-        background-color: #dee2e6;
+        background-color: #011f38;
+        color: #fff;
         border-radius: 7px;
         padding: 6%;
+        width: 100%;
+    margin: auto;
+    text-align: center;
     }
 }
 @media (max-width: 768px) {
     .product-price h3 {
-        width: 26vw;
+        background-color: #011f38;
+        color: #fff;
+        width: 100%;
+    margin: auto;
+    text-align: center;
     }
 }
 @media (max-width: 1024px) {
     .product-price h3 {
+        background-color: #011f38;
+        color: #fff;
         margin: 5%;
-        width: 26vw;
-        padding: 2%;
+        width: 100%;
+        margin: auto;
+        text-align: center;
     }
 }
 
