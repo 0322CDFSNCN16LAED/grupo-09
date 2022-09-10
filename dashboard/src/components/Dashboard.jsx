@@ -1,15 +1,15 @@
-
-import GenresInDb from "./genres/GenresInDb";
 import MiniCard from "./MiniCard";
 import ToursInDb from "./tours/ToursInDb";
 import UltimoTour from "./tours/UltimoTour";
+import ProductsMiniCards from "./ProductMiniCards";
+
 
 const miniCards = [
     {
         id: "5",
         title: "Total de tours",
         color: "success",
-        value: "25",
+        value: <ProductsMiniCards />,
         icon: "fa-film",
     },
     {

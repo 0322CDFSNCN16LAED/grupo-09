@@ -23,6 +23,10 @@ function ToursInDb() {
         fetchData()
     }, [])
 
+    if(!productos) {
+        return <div>Cargando...</div>
+    }
+
     
 
 
