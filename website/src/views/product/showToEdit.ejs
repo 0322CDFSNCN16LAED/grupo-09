@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%-include ("../partials/head") %>
+    </head>
+    <body  class="formularioAdminBody">
+        <header><%-include("../partials/header")%></header>
+        <main>
+            <div class="container-xxl login-register admin">
+            <div class="rowAdminForm">
+                <div class="col login-logo admin">
+                    <img src="/images/logo-nobg.png" />
+                </div>
+            </div>
+            <div class="row adminRow">
+                <section class="formulario form-login adminForm ">
+                    <h5>Nuevo tour</h5>
+                    <form method="POST" action="/product/edit" >
+                        <label>Seleccionar el id del tour a editar:</label>
+                        <input
+                            class="input-login"
+                            type="number"
+                            name="idNumber"
+                        
+                            />
+                            <input class="btn-login" type="submit" value="Buscar" />
+                            </form>
+                            </section>
+                            </div>
+                            </div>
+                            </main>
+    
+
+    
+</body>
+</html>

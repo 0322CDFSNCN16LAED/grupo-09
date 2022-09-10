@@ -18,6 +18,8 @@ router.get("/formulario", productController.create)
 router.post("/formulario", fileUpload.single("image"), productController.store)
 
 // Edit product
+router.get("/edit" ,productController.showOptions )
+router.post("/edit", productController.searchOptions)
 router.get("/edit/:id", productController.edit)
 router.put("/edit/:id", productController.updateEdition)
 

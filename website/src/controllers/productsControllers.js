@@ -75,6 +75,17 @@ const controllers = {
             res.render("product/product-edit-form", { product: tour })
         })
     },
+    showOptions: (req,res)=>{
+        console.log("hjola");
+        res.render("product/showToEdit.ejs")
+    },
+    searchOptions :  (req,res)=>{
+        let id = req.body.idNumber
+        let tour = db.Products.findByPk(id).then((tour) => {
+            res.render("product/product-edit-form", { product: tour })
+        })
+        
+    },
 
     updateEdition: (req, res) => {
         let id = req.params.id
