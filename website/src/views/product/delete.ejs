@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <%- include("../partials/head") %>
     </head>
+    
+    <body  class="formularioAdminBody">
+        <main>
+            <div class="container-xxl login-register admin">
+            <div class="rowAdminForm">
+                <div class="col login-logo admin">
+                    <img src="/images/logo-nobg.png" />
+                </div>
+            </div>
+            <div class="row adminRow">
+                <section class="formulario form-login adminForm ">
+                    <h5>El producto que estás intentando eliminar es <%= tourBuscado.name
+                        %>, coloca su ID (<%= tourBuscado.id%>) aqui abajo.</h5>
+                    <form action="/product/delete/<%= tourBuscado.id %>?_method=delete"
+                        method="post">
+                        <label>ID del tour a eliminar:</label>
+                        <input
+                            class="input-login"
+                            type="number"
+                            name="id"
+                            value="<%= tourBuscado.id %> "
+                            />
+                            <input class="btn-login" type="submit" value="Eliminar" />
+                            </form>
+                            </section>
+                            </div>
+                            </div>
+                            </main>
+                            </body>
+                            
+                            <!--
     <body>
         <h1>
             El producto que estás intentando eliminar es <%= tourBuscado.name
@@ -17,5 +45,5 @@
             <input type="text" name="id" value="<%= tourBuscado.id %> " />
             <input type="submit" value="eliminar" />
         </form>
-    </body>
+    </body>-->
 </html>

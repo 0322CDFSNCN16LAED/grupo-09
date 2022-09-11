@@ -18,12 +18,14 @@ router.get("/formulario", productController.create)
 router.post("/formulario", fileUpload.single("image"), productController.store)
 
 // Edit product
-router.get("/edit" ,productController.showOptions )
-router.post("/edit", productController.searchOptions)
+router.get("/edit" ,productController.showOptionsToEdit )
+router.post("/edit", productController.searchOptionsToEdit)
 router.get("/edit/:id", productController.edit)
 router.put("/edit/:id", productController.updateEdition)
 
 // Delete
+router.get("/delete" ,productController.showOptionsToDelete )
+router.post("/delete", productController.searchOptionsToDelte)
 router.get("/delete/:id", productController.delete)
 router.delete("/delete/:id", productController.destroy)
 
