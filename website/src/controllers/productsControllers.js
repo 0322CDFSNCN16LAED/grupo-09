@@ -105,7 +105,7 @@ const controllers = {
                 where: { id: id },
             }
         ).then(() => {
-            res.render("/")
+            res.render("product/showToEdit.ejs")
         })
     },
     delete: (req, res) => {
