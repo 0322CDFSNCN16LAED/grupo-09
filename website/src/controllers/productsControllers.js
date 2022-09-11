@@ -75,11 +75,11 @@ const controllers = {
             res.render("product/product-edit-form", { product: tour })
         })
     },
-    showOptions: (req,res)=>{
-        console.log("hjola");
+    showOptionsToEdit: (req,res)=>{
+        
         res.render("product/showToEdit.ejs")
     },
-    searchOptions :  (req,res)=>{
+    searchOptionsToEdit :  (req,res)=>{
         let id = req.body.idNumber
         let tour = db.Products.findByPk(id).then((tour) => {
             res.render("product/product-edit-form", { product: tour })
@@ -107,6 +107,16 @@ const controllers = {
         ).then(() => {
             res.render("product/showToEdit.ejs")
         })
+    },
+    showOptionsToDelete : (req, res)=>{
+        res.render("product/showToDelete.ejs")
+    },
+    searchOptionsToDelte :  (req,res)=>{
+        let id = req.body.idNumber
+        let tour = db.Products.findByPk(id).then((tour) => {
+            res.render("product/delete", { tourBuscado: tour })
+        })
+        
     },
     delete: (req, res) => {
         db.Products.findByPk(req.params.id).then((tourBuscado) => {
