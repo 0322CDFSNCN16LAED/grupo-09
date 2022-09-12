@@ -74,12 +74,14 @@
                         <% if (locals.errors && errors.city) { %>
                         <p  style="color: white"><%= errors.city.msg %></p>
                         <% } %>  
-                        <input
-                            class="input-login"
-                            type="text"
-                            name="continent"
-                            placeholder="Continente del tour"
-                            />
+                            <select name="continent" class="input-login">
+                                <option disabled selected>Continente del tour</option>
+                                <option value="africa">África</option>
+                                <option value="asia">Asia</option>
+                                <option value="america">América</option>
+                                <option value="europa">Europa</option>
+                                <option value="oceania">Oceanía</option>
+                              </select>
                         <% if (locals.errors && errors.continent) { %>
                         <p  style="color: white"><%= errors.continent.msg %></p>
                         <% } %>  
