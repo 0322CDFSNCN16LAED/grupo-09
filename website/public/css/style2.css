@@ -880,7 +880,8 @@ h1 {
     filter: drop-shadow(8px 8px 15px #000);
 }
 .product-detail .img-container h2 {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    margin-top: 1em;
 }
 #tourName {
     color: #212529;
@@ -902,7 +903,7 @@ main .product-description {
     width: 100%;
     align-self: left;
 }
-.product-description p {
+.product-description h3 {
     width: 100%;
     margin: auto;
     text-align: center;
@@ -950,7 +951,7 @@ main .product-description {
     .img-card-detail {
         margin: 1% 10% 1% 10%;
     }
-    .product-description p {
+    .product-description h3 {
         padding: 2%;
     }
 }
@@ -1300,4 +1301,21 @@ main .product-description {
 }
 .row > * {
     padding: inherit;
+}
+.flexPd {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content: space-around;
+}
+.inPd {
+    width: 40%;
+    margin: 3%;
+}
+.descriptionInPd {
+    width: 80%;
+}
+.addButton {
+    width: 154px;
+    height: 46px;
 }

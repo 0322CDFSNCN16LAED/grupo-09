@@ -21,17 +21,22 @@
                                 alt="<%= tour.city %> " />
                         </div>
                         <div class="product-description div">
-                            <p><%= tour.description %></p>
+                            <h3 style="width: 90%"><%= tour.description %></h3>
                         </div>
-                        <div class="product-price div">
-                            <h3>$ <%= tour.price %>.- ARS</h3>
+
+                        <div class="flexPd">
+                            <div class="product-price div inPd">
+                                <h3>
+                                    $ <%= tour.price * (100 - tour.discount)
+                                    /100 %>.- ARS
+                                </h3>
+                            </div>
+                            <div class="product-price div inPd">
+                                <h3><%= tour.discount %>% OFF</h3>
+                            </div>
                         </div>
+
                         <div class="button-container div">
-                            <!-- <button
-                                    type="submit"
-                                    class="buttonProductOption addButton buttonProductOptionColor buttonProductHover">
-                                    Agregar al carrito
-                                </button> -->
                             <a href="#toHere">
                                 <button
                                     type="submit"
@@ -237,7 +242,10 @@
                         </div>
                         <div class="finalPrice">
                             <p>Precio final:</p>
-                            <p>$ <%= tour.price %>.- ARS</p>
+                            <p>
+                                $ <%= tour.price * (100 - tour.discount) /100
+                                %>.- ARS
+                            </p>
                         </div>
 
                         <button
