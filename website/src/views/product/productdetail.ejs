@@ -2,6 +2,7 @@
 <html lang="es">
     <head>
         <%-include ("../partials/head") %>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
     <body class="detailBody">
         <header><%-include("../partials/header")%></header>
@@ -31,7 +32,7 @@
                                     class="buttonProductOption addButton buttonProductOptionColor buttonProductHover">
                                     Agregar al carrito
                                 </button> -->
-                            <a href="#addedToCart">
+                            <a href="#toHere">
                                 <button
                                     type="submit"
                                     class="addButton buttonProductOption buttonProductOptionColor buttonProductHover">
@@ -192,9 +193,10 @@
                                         width="100%"
                                         src="/images/productsImages/<%=tour.image %>"
                                         alt="<%=tour.city %>" />
-                                    <!-- <a href="./productCart"><p>RESERVAR</p></a> -->
                                 </div>
-                                <p class="text-card"><%=tour.description %></p>
+                                <p id="toHere" class="text-card">
+                                    <%=tour.description %>
+                                </p>
                             </article>
                         </div>
                     </div>
@@ -218,19 +220,26 @@
                             <h4><%= tour.name %></h4>
                             <h5>por <%= tour.continent%></h5>
                         </div>
-                        <select
-                            id="selectPeople"
-                            type="number"
-                            class="form-control"
-                            name=""
-                            id="">
-                            <option value="1">1</option>
-                            <option value="2" selected>2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        <p id="price"></p>
+                        <div class="peopleQuantity">
+                            <label for="">Cantidad de personas</label>
+                            <select
+                                id="selectPeople"
+                                type="number"
+                                class="form-control"
+                                name=""
+                                id="">
+                                <option value="1">1</option>
+                                <option value="2" selected>2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="finalPrice">
+                            <p>Precio final:</p>
+                            <p>$ <%= tour.price %>.- ARS</p>
+                        </div>
+
                         <button
                             margin="2%"
                             id="deleteItem"
@@ -240,6 +249,7 @@
                             Cancelar
                         </button>
                         <button
+                            id="confirmItem"
                             margin="2%"
                             type="button"
                             class="btn btn-success">

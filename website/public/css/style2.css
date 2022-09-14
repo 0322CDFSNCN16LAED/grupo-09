@@ -1271,3 +1271,20 @@ main .product-description {
         width: 92%;
     }
 }
+#selectPeople {
+    width: 15%;
+    text-align: center;
+}
+@media screen and (min-width: 1024px) {
+    #selectPeople {
+        width: 50%;
+    }
+}
+.peopleQuantity {
+    border-bottom: 1px solid;
+    margin-bottom: 0.5rem;
+}
+.finalPrice {
+    border-bottom: 1px solid;
+    margin-bottom: 0.5rem;
+}
