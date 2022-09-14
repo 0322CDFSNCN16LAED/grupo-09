@@ -237,10 +237,10 @@ html {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    width: 33%;
+    width: auto;
 }
 .payment {
-    width: 33%;
+    width: auto;
 }
 .payment-methods {
     display: flex;
@@ -265,7 +265,7 @@ html {
     margin-bottom: 6px;
 }
 .partners {
-    width: 33%;
+    width: auto;
 }
 .ourPartners {
     display: flex;
@@ -286,6 +286,7 @@ html {
 @media (max-width: 768px) {
     .footer {
         flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -1287,4 +1288,16 @@ main .product-description {
 .finalPrice {
     border-bottom: 1px solid;
     margin-bottom: 0.5rem;
+}
+.fit {
+    width: 90vw;
+    margin: auto;
+}
+.row {
+    justify-content: center;
+    /* width: auto; */
+    margin: auto;
+}
+.row > * {
+    padding: inherit;
 }
