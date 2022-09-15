@@ -1119,7 +1119,6 @@ main .product-description {
         content: "";
         display: table;
         clear: both;
-        margin: auto;
     }
 
     /* The bar container */
