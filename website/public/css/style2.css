@@ -877,7 +877,7 @@ h1 {
     background-color: #fff;
     margin-bottom: 20px;
     border-radius: 5px;
-    filter: drop-shadow(8px 8px 15px #000);
+    filter: drop-shadow(3px 3px 8px rgb(124, 123, 123));
 }
 .product-detail .img-container h2 {
     margin-bottom: 0.5em;
@@ -1218,6 +1218,7 @@ main .product-description {
 .show {
     display: block;
 }
+
 /* #addedToCart {
     margin: 5%;
     width: 60%;
@@ -1246,7 +1247,7 @@ main .product-description {
     background-color: #fff;
     margin-top: 20px;
     border-radius: 5px;
-    filter: drop-shadow(8px 8px 15px #000);
+    filter: drop-shadow(3px 3px 8px rgb(124, 123, 123));
 }
 .confirmImg {
     border-radius: 20px;
