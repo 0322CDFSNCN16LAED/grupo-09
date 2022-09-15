@@ -18,7 +18,7 @@ window.onload = function () {
     deleteItem.addEventListener("click", () => {
         addedToCart.classList.add("hide")
     })
-    if ((selectValue = 2)) {
+   /* if ((selectValue = 2)) {
         price.innerHTML = price + 2
-    }
+    }*/ 
 }

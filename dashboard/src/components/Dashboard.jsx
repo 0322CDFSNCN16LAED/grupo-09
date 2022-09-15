@@ -45,7 +45,7 @@ export default function Dashboard() {
             {/* <!-- End movies in Data Base --> */}
 
             {/* <!-- Content Row Last Movie in Data Base --> */}
-            <div className="row">
+            <div className="row ">
                 {/* <!-- Ultimo tour creado --> */}
                 <UltimoTour />
                 {/* <!-- Fin ultimo tour creado --> */}
