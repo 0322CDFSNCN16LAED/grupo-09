@@ -27,7 +27,8 @@
         "nodemon": "^2.0.16",
         "override": "^0.0.1",
         "sequelize": "^6.21.3",
-        "session": "^0.1.0"
+        "session": "^0.1.0",
+        "sweetalert": "^2.1.2"
     },
     "repository": {
         "type": "git",

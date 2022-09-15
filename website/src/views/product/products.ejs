@@ -14,27 +14,30 @@
                     <% products.forEach(product => { %>
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="justBorder">
-                                <a
+                            <a
                                 class="product-box"
                                 href="/product/<%= product.id %> ">
-                                <div class="img-container" style="padding: 1%;">
-                                <h2 id="tourName"><%= product.name %></h2>
-                                <div class="img-card-detail" >
-                                    <img width="70%" src="/images/productsImages/<%=product.image %>" alt="<%= product.city %> " />
+                                <div class="img-container" style="padding: 1%">
+                                    <h2 id="tourName"><%= product.name %></h2>
+                                    <div class="img-card-detail">
+                                        <img
+                                            width="70%"
+                                            src="/images/productsImages/<%=product.image %>"
+                                            alt="<%= product.city %> " />
+                                    </div>
+                                    <div class="product-description div">
+                                        <p><%= product.description %></p>
+                                    </div>
+                                    <div class="product-price div">
+                                        <h3>
+                                            $ <%= product.price * (100 -
+                                            product.discount) /100 %>.- ARS
+                                        </h3>
+                                    </div>
+                                    <div class="product-price div">
+                                        <h3><%= product.discount %>% OFF</h3>
+                                    </div>
                                 </div>
-                                <div class="product-description div">
-                                    <p> <%= product.description %> </p>
-                                </div>
-                                <div class="product-price div">
-                                    <h3>$ <%= product.price * (100 -
-                                        product.discount) /100 %>.- ARS</h3>
-                                </div>
-                                <div class="product-price div">
-                                    <h3><%= product.discount %>%
-                                        OFF</h3>
-                                </div>
-                               
-                            </div>
                             </a>
                         </div>
                     </div>

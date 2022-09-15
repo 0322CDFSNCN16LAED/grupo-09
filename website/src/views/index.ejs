@@ -29,11 +29,11 @@
                             <img src="images/slider3.png" class="d-block w-100" alt="...">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <button style="left: 2%;" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <button style="right: 2%;" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                     </button>
@@ -43,7 +43,7 @@
                         <h2 class="font-heading">Elige tu próxima aventura</h2>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style="width: -webkit-fill-available;">
                     <div class="col"><img width="100%" src="/images/africa.svg" alt="Africa" /></div>
                     <div class="col"><img width="100%" src="/images/america.svg" alt="America" /></div>
                     <div class="col"><img width="100%" src="/images/asia.svg" alt="Asia" /></div>
@@ -65,42 +65,6 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-2 filtros">
-                        <div id="mobile-filter">
-                            <div class="border-bottom pb-2 ml-2">
-                                <h4 id="burgundy">Filtros</h4>
-                            </div>
-                            <div class="py-2 border-bottom ml-3">
-                                <h6 class="font-weight-bold">Categorias</h6>
-                                <form>
-                                    <div class="form-group"> <input type="checkbox" id="artisan"> <label for="artisan">Free Tour</label> </div>
-                                    <div class="form-group"> <input type="checkbox" id="breakfast"> <label for="breakfast">Guiado</label> </div>
-                                    <div class="form-group"> <input type="checkbox" id="healthy"> <label for="healthy">En oferta</label> </div>
-                                </form>
-                            </div>
-                            <div class="py-2 border-bottom ml-3">
-                                <h6 class="font-weight-bold">Continente</h6>
-                                <form>
-                                    <div class="form-group"> <input type="checkbox" id="tea"> <label for="tea">América</label> </div>
-                                    <div class="form-group"> <input type="checkbox" id="cookies"> <label for="cookies">Europa</label> </div>
-                                    <div class="form-group"> <input type="checkbox" id="pastries"> <label for="pastries">Asia</label> </div>
-                                    <div class="form-group"> <input type="checkbox" id="dough"> <label for="dough">Africa</label> </div>
-                                    <div class="form-group"> <input type="checkbox" id="choco"> <label for="choco">Oceanía</label> </div>
-                                </form>
-                            </div>
-                            <div class="py-2 ml-3">
-                                <h6 class="font-weight-bold">Descuentos</h6>
-                                <form>
-                                    <div class="form-group"> <input type="checkbox" id="25off"> <label for="25">25% off</label> </div>
-                                    <div class="form-group"> <input type="checkbox" id="5off"> <label for="5off" id="off">5% off </label> </div>
-                                </form>
-                            </div>
-                        </div>
-                        <!-- Sidebar filter section -->
-                        <section id="sidebar">
-                    </div>
-
-
                     <div class="col-md-10">
                         <% products.forEach(product => {%>
                         <div class="col primaryTripCard pt-3">

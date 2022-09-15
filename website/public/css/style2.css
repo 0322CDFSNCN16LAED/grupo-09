@@ -237,10 +237,10 @@ html {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    width: 33%;
+    width: auto;
 }
 .payment {
-    width: 33%;
+    width: auto;
 }
 .payment-methods {
     display: flex;
@@ -265,7 +265,7 @@ html {
     margin-bottom: 6px;
 }
 .partners {
-    width: 33%;
+    width: auto;
 }
 .ourPartners {
     display: flex;
@@ -286,6 +286,7 @@ html {
 @media (max-width: 768px) {
     .footer {
         flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -879,7 +880,8 @@ h1 {
     filter: drop-shadow(3px 3px 8px rgb(124, 123, 123));
 }
 .product-detail .img-container h2 {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    margin-top: 1em;
 }
 #tourName {
     color: #212529;
@@ -901,7 +903,7 @@ main .product-description {
     width: 100%;
     align-self: left;
 }
-.product-description p {
+.product-description h3 {
     width: 100%;
     margin: auto;
     text-align: center;
@@ -949,7 +951,7 @@ main .product-description {
     .img-card-detail {
         margin: 1% 10% 1% 10%;
     }
-    .product-description p {
+    .product-description h3 {
         padding: 2%;
     }
 }
@@ -1271,4 +1273,54 @@ main .product-description {
     .confirmCard {
         width: 92%;
     }
+}
+#selectPeople {
+    width: 15%;
+    text-align: center;
+}
+@media screen and (min-width: 1024px) {
+    #selectPeople {
+        width: 50%;
+    }
+}
+.peopleQuantity {
+    border-bottom: 1px solid;
+    margin-bottom: 0.5rem;
+}
+.finalPrice {
+    border-bottom: 1px solid;
+    margin-bottom: 0.5rem;
+}
+.fit {
+    width: 90vw;
+    margin: auto;
+}
+.row {
+    justify-content: center;
+    /* width: auto; */
+    margin: auto;
+}
+.row > * {
+    padding: inherit;
+}
+.flexPd {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content: space-around;
+}
+.inPd {
+    width: 40%;
+    margin: 3%;
+}
+.descriptionInPd {
+    width: 80%;
+}
+.addButton {
+    width: 154px;
+    height: 46px;
+}
+.coolEfect:hover {
+    box-shadow: 0 4px 8px 0 rgba(100, 85, 85, 0.2),
+        0 6px 20px 0 rgb(100, 85, 85, 0.2);
 }
