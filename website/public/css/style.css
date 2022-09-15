@@ -105,7 +105,6 @@ body {
         margin-top: 20px;
     }
     .tripCard {
-        margin: 5%;
         padding-top: 20px;
     }
     .tripCard:hover {
@@ -719,14 +718,7 @@ h1 {
     padding-top: 40px;
     background-color: #eae8e8;
 }
-.justBorder {
-    border-radius: 20px;
-    margin: 10%;
-    padding: 1%;
-    -webkit-box-shadow: 0px 0px 15px 11px rgba(212, 212, 212, 1);
-    -moz-box-shadow: 0px 0px 15px 11px rgba(212, 212, 212, 1);
-    box-shadow: 0px 0px 15px 11px rgba(212, 212, 212, 1);
-}
+
 .product-box {
     text-decoration: none !important;
     font-size: 20px;
@@ -819,4 +811,34 @@ h1 {
     text-align: center;
     justify-content: center;
     border-radius: 10px;
+}
+.justBorder {
+    border-radius: 20px;
+    margin: 10%;
+    padding: 1%;
+    -webkit-box-shadow: 0px 0px 15px 11px rgba(212, 212, 212, 1);
+    -moz-box-shadow: 0px 0px 15px 11px rgba(212, 212, 212, 1);
+    box-shadow: 0px 0px 15px 11px rgba(212, 212, 212, 1);
+}
+@media (min-width: 1024px) {
+    .notFlex {
+        display: block;
+    }
+    .primaryTripCard {
+        width: 40%;
+    }
+    .indexFlex {
+        width: 95vw;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .justBorder {
+        width: 32%;
+        margin: 4%;
+    }
+    .imgIndex {
+        border-radius: 8px 8px 0px 0px;
+    }
 }
