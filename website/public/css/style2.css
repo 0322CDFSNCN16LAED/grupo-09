@@ -1119,7 +1119,6 @@ main .product-description {
         content: "";
         display: table;
         clear: both;
-        margin: auto;
     }
 
     /* The bar container */
@@ -1264,11 +1263,7 @@ main .product-description {
 .confirmFlex {
     display: flex;
 }
-@media screen and (min-width: 1024px) {
-    .flex {
-        display: flex;
-    }
-}
+
 @media screen and (max-width: 768px) {
     .confirmCard {
         width: 92%;
