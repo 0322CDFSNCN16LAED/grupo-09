@@ -599,47 +599,107 @@ h1 {
 /* FIN FORMULARIO ADMIN */
 
 /* NOT FOUND */
-.notFoundBody {
-    background-color: rgb(211 207 192);
+@import url(https://fonts.googleapis.com/css?family=opensans:500);
+body {
+    background: #33cc99;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    max-height: 700px;
+    overflow: hidden;
+}
+.c {
+    text-align: center;
+    display: block;
+
+    width: 80%;
+    margin: 100px auto;
+}
+.notFoundMain h1 {
+    z-index: 2;
+    text-align: center;
+    font-size: 100px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+    letter-spacing: 15px;
+}
+._1 {
+    text-align: center;
+    display: block;
+
+    letter-spacing: 12px;
+    font-size: 4em;
+    line-height: 80%;
+}
+._2 {
+    text-align: center;
+    display: block;
+
+    font-size: 20px;
+}
+.text {
+    font-size: 70px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin: 19px 0px 0px 0px;
+    /* top: 256.301px; */
+    z-index: 3;
+    width: 100%;
+    line-height: 1.2em;
+    display: inline-block;
+}
+
+.btn {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    padding: 5px;
+    z-index: 5;
+    font-size: 25px;
+    margin: 0 auto;
+    color: #33cc99;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+hr {
+    padding: 0;
+    border: none;
+    border-top: 5px solid #fff;
+    color: #fff;
+    text-align: center;
+    margin: 0px auto;
+    width: 90%;
+    height: 10px;
+    z-index: -10;
+    margin-bottom: 50px;
+}
+
+hr:after {
+    content: "\2022";
+    display: inline-block;
+    position: relative;
+    top: -0.75em;
+    font-size: 2em;
+    padding: 0 0.2em;
+    background: #33cc99;
 }
 .notFoundMain {
-    background-color: rgb(211 207 192);
-    height: 100vh;
-}
-.sectionError {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
-.error404 {
-    text-align: center;
-    padding-top: 10%;
-    font-size: larger;
-    margin-bottom: 12vh;
-}
-.notFoundImage {
-    border-radius: 50%;
-    height: 200px;
-    margin: auto;
-}
-.notFoundImageContainer {
-    margin: auto;
+@media (min-width: 768px) {
+    .c {
+        width: 33%;
+    }
 }
 
-.btn-outline-success {
-    margin: auto;
-
-    display: block;
-    width: 31vw;
-    left: 37%;
-    top: 85%;
-    background-color: #009459;
-    color: #fff;
-    border: #fff;
-}
-.toHome {
-    margin-top: 12vh;
-}
 /* FIN NOT FOUND */
 
 /* PRODUCTS */

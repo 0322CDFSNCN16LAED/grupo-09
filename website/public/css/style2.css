@@ -1319,3 +1319,7 @@ main .product-description {
     width: 154px;
     height: 46px;
 }
+.coolEfect:hover {
+    box-shadow: 0 4px 8px 0 rgba(100, 85, 85, 0.2),
+        0 6px 20px 0 rgb(100, 85, 85, 0.2);
+}
