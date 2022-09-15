@@ -1,6 +1,6 @@
 export default function BigCard({ title, children }) {
     return (
-        <div className="col-lg-5 mb-4">
+        <div className="col-lg-10 mb-4">
             <div className="card shadow mb-4">
                 <div className="card-header py-3 header-bcard">
                     <h5 className="m-0 font-weight-bold text-gray-800">

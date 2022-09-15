@@ -46,13 +46,16 @@ export default function Dashboard() {
 
             {/* <!-- Content Row Last Movie in Data Base --> */}
             <div className="row ">
+                <div className="col">
                 {/* <!-- Ultimo tour creado --> */}
                 <UltimoTour />
+                </div>
                 {/* <!-- Fin ultimo tour creado --> */}
 
                 {/* <!-- Genres in DB --> */}
-              
+                <div className="col">
                 <ToursInDb />
+                </div>
             </div>
         </>
     );
