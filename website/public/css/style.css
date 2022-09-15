@@ -814,6 +814,14 @@ h1 {
 }
 .justBorder {
     border-radius: 20px;
+    margin: 14%;
+    padding: 1%;
+    -webkit-box-shadow: 0px 0px 15px 11px rgba(212, 212, 212, 1);
+    -moz-box-shadow: 0px 0px 15px 11px rgba(212, 212, 212, 1);
+    box-shadow: 0px 0px 15px 11px rgba(212, 212, 212, 1);
+}
+.justBorderIndex {
+    border-radius: 20px;
     margin: 10%;
     padding: 1%;
     -webkit-box-shadow: 0px 0px 15px 11px rgba(212, 212, 212, 1);
@@ -834,7 +842,7 @@ h1 {
         flex-wrap: wrap;
         margin: auto;
     }
-    .justBorder {
+    .justBorderIndex {
         width: 32%;
         margin: 4%;
     }
