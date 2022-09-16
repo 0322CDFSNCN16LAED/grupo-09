@@ -13,6 +13,8 @@ const fileUpload = require("../middlewares/multerNewProduct")
 // Todos los productos
 // router.get("/", productController.index);
 router.get("/products", productController.list)
+// Tours por continente
+router.get("/productContinent", productController.listContinents)
 // Create product
 router.get("/formulario", productController.create)
 router.post("/formulario", fileUpload.single("image"), productController.store)

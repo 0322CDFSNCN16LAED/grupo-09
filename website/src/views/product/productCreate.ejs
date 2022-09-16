@@ -58,15 +58,15 @@
                             name="rate"
                             placeholder="Promedio de puntuacion del tour"
                             />
-                        <% if (locals.errors && errors.rate) { %>
-                        <p  style="color: white"><%= errors.rate.msg %></p>
-                        <% } %> 
-                        <input
-                            class="input-login"
-                            type="text"
-                            name="country"
-                            placeholder="Pais del tour"
-                            />
+                            <% if (locals.errors && errors.rate) { %>
+                                <p  style="color: white"><%= errors.rate.msg %></p>
+                                <% } %> 
+                                <select name="country" class="input-login">
+                                    <option disabled selected>Pais del tour</option>
+                                    <% paises.forEach( pais => { %>
+                                     <option> <%= pais.name %> </option>
+                                    <% }) %>
+                                </select>
                         <% if (locals.errors && errors.country) { %>
                         <p  style="color: white"><%= errors.country.msg %></p>
                         <% } %>  

@@ -140,6 +140,20 @@ const controllers = {
             res.render("./product/products", { products })
         })
     },
+    // Continents
+    listContinents: (req, res) => {
+        db.Products.findAll({
+            where: {continent: 'Africa'}
+            }).then((products) =>{
+            res.render("./product/productContinent", { products })
+            });
+    },
+    // API Paises
+    paises: async (req, res) => {
+        const countries = await fetch ("https://restcountries.com/v3.1/all").then(response => response.json());
+
+        return res.render("./product/productCreate", { countries });
+    },
 }
 module.exports = controllers
 /*
