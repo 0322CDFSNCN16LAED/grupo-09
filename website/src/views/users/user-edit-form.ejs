@@ -5,13 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Editando usuario</title>
+        <%-include ("../partials/head") %>
     </head>
     <body>
+        <header>
+            <%-include ("../partials/header") %>
+         </header>
+    <div class="container-xxl login-register">
+        <section class="form-edituser">
         <h2 class="">
             Estás editando:
             <i><%= user.name+", "+"cuyo id es"+" "+user.id%> </i>
         </h2>
-        <form action="/edituser/<%= user.id %>?_method=PUT" method="POST">
+
+        <form action="/users/edituser/<%= user.id %>?_method=PUT" method="POST"  enctype="multipart/form-data">
             <div class="">
                 <label for="name" class="">Nombre del usuario:</label>
                 <input
@@ -20,7 +27,7 @@
                     id="name"
                     name="name"
                     placeholder="Ej: Pedro Alfonso"
-                    class="" />
+                    class="input-login" />
             </div>
             <div>
                 <label for="email" class="">Email:</label>
@@ -29,7 +36,7 @@
                     id="email"
                     name="email"
                     value="<%= user.email %>"
-                    class="" />
+                    class="input-login" />
             </div>
             <div>
                 <label for="phoneNumber" class="">Número de contacto:</label>
@@ -38,7 +45,7 @@
                     id="phoneNumber"
                     name="phoneNumber"
                     value="<%= user.celular %>"
-                    class="" />
+                    class="input-login" />
             </div>
             <div>
                 <label for="password" class="">Password:</label>
@@ -47,22 +54,22 @@
                     id="password"
                     name="password"
                     placeholder=""
-                    class="" />
+                    class="input-login" />
             </div>
             <div>
                 <label for="uploadFile" class="">Avatar:</label>
                 <input
-                    type="file"
-                    id="uploadFile"
-                    name="uploadFile"
-                    placeholder=""
-                    class="" />
+                                    class="input-login avatar"
+                                    type="file"
+                                    name="avatar" />
             </div>
             <div>
                 <a href="/users/profile"
-                    ><input type="submit" value="Editar"
+                    ><input class="btn-login" type="submit" value="Editar"
                 /></a>
             </div>
         </form>
+       </section>
+    </div>
     </body>
 </html>

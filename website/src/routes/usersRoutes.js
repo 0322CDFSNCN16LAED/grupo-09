@@ -33,6 +33,6 @@ router.get("/logout/", usersController.logout)
 
 // Edit user
 router.get("/edituser/:id", usersController.edit)
-router.put("/edituser/:id", usersController.updateEdition)
+router.put("/edituser/:id", fileUpload.single("avatar"), usersController.updateEdition)
 
 module.exports = router
