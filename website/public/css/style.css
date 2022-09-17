@@ -106,6 +106,7 @@ body {
     }
     .tripCard {
         padding-top: 20px;
+        height: fit-content;
     }
     .tripCard:hover {
         box-shadow: 0 4px 8px 0 rgba(100, 85, 85, 0.2),
