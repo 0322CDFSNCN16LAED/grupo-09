@@ -134,15 +134,6 @@ body {
     opacity: 0.85;
 }
 
-.form-login h5 {
-    margin: 0;
-    text-align: center;
-    height: 40px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid;
-    font-size: 20px;
-}
-
 .form-register {
     height: 92%;
     background: #4e4d4d;
@@ -849,4 +840,9 @@ h1 {
     .imgIndex {
         border-radius: 8px 8px 0px 0px;
     }
+}
+.aboutToDelete {
+    margin-bottom: 5%;
+    text-align: center;
+    padding: 5%;
 }
