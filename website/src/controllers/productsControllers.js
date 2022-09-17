@@ -141,11 +141,39 @@ const controllers = {
         })
     },
     // Continents
-    listContinents: (req, res) => {
+    africa: (req, res) => {
         db.Products.findAll({
             where: {continent: 'Africa'}
             }).then((products) =>{
-            res.render("./product/productContinent", { products })
+            res.render("./product/africa", { products })
+            });
+    },
+    america: (req, res) => {
+        db.Products.findAll({
+            where: {continent: 'América'}
+            }).then((products) =>{
+            res.render("./product/america", { products })
+            });
+    },
+    oceania: (req, res) => {
+        db.Products.findAll({
+            where: {continent: 'Oceania'}
+            }).then((products) =>{
+            res.render("./product/oceania", { products })
+            });
+    },
+    asia: (req, res) => {
+        db.Products.findAll({
+            where: {continent: 'Asia'}
+            }).then((products) =>{
+            res.render("./product/asia", { products })
+            });
+    },
+    europa: (req, res) => {
+        db.Products.findAll({
+            where: {continent: 'Europa'}
+            }).then((products) =>{
+            res.render("./product/europa", { products })
             });
     },
     // API Paises
@@ -154,6 +182,7 @@ const controllers = {
 
         return res.render("./product/productCreate", { countries });
     },
+    
 }
 module.exports = controllers
 /*

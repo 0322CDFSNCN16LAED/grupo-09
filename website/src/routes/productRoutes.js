@@ -14,7 +14,11 @@ const fileUpload = require("../middlewares/multerNewProduct")
 // router.get("/", productController.index);
 router.get("/products", productController.list)
 // Tours por continente
-router.get("/productContinent", productController.listContinents)
+router.get("/africa", productController.africa)
+router.get("/america", productController.america)
+router.get("/oceania", productController.oceania)
+router.get("/asia", productController.asia)
+router.get("/europa", productController.europa)
 // Create product
 router.get("/formulario", productController.create)
 router.post("/formulario", fileUpload.single("image"), productController.store)
@@ -34,5 +38,7 @@ router.delete("/delete/:id", productController.destroy)
 // Product cart / Detail
 router.get("/productcart", productController.productCart)
 router.get("/:id", productController.productDetail)
+
+
 
 module.exports = router
