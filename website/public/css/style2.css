@@ -913,6 +913,39 @@ h1 {
     margin-bottom: 20px;
     border-radius: 5px;
     filter: drop-shadow(3px 3px 8px rgb(124, 123, 123));
+   
+}
+@media (min-width: 1300px) {
+    .product-detail {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2.5em;
+        height: 500px;
+    }
+    
+    .product-detail .img-container {
+        height: 400px;
+        width: 400px;
+
+    }
+    .product-detail .img-container h2 {
+        margin-bottom: 0.5em;
+        margin-top: 0em;
+    }
+    #tourName {
+        color: #212529;
+        font-size: 24px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .img-card-detail {
+        margin-left: 50px;
+        width: 70%;
+        height: 190px;
+    }
+    
 }
 .product-detail .img-container h2 {
     margin-bottom: 0.5em;
@@ -1378,4 +1411,8 @@ border-radius: 180px;
 
 .toursuge {
     margin-top: 50px;
+}
+
+.opinn {
+    margin-top: 80px;
 }

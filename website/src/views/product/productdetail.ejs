@@ -20,21 +20,9 @@
                                 src="/images/productsImages/<%= tour.image %>"
                                 alt="<%= tour.city %> " />
                         </div>
-                        <div class="product-description div">
-                            <h3 style="width: 90%"><%= tour.description %></h3>
-                        </div>
+                       
 
-                        <div class="flexPd">
-                            <div class="product-price div inPd">
-                                <h3>
-                                    $ <%= tour.price * (100 - tour.discount)
-                                    /100 %>.- ARS
-                                </h3>
-                            </div>
-                            <div class="product-price div inPd">
-                                <h3><%= tour.discount %>% OFF</h3>
-                            </div>
-                        </div>
+                        
 
                         <div class="button-container div">
                             <a href="#toHere">
@@ -48,7 +36,8 @@
                     </div>
                 </section>
                 <div class="row-test opinions login-register">
-                    <div class="col-test">
+                    <div class="col-test opinn">
+                        
                         <span class="heading">Opiniones del tour</span>
                         <div class="fiveStars">
                             <span class="fa fa-star checked"></span>
@@ -115,10 +104,23 @@
                                 <div>2</div>
                             </div>
                         </div>
+                        <div class="flexPd">
+                            <div class="product-price div inPd">
+                                <h3>
+                                    $ <%= tour.price * (100 - tour.discount)
+                                    /100 %>
+                                </h3>
+                            </div>
+                            <div class="product-price div inPd">
+                                <h3><%= tour.discount %>% OFF</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
+            <div class="product-description div">
+                <h3 style="width: 90%"><%= tour.description %></h3>
+            </div>
             <div class="testimonials">
                 <div class="inner-test">
                     <div class="row-test">
