@@ -4,6 +4,7 @@
         <%- include("../partials/head") %>
     </head>
     <body  class="formularioAdminBody">
+         <script src="/js/productValidation.js"></script> 
         <header><%-include("../partials/header")%></header>
         <main>
             <div class="container-xxl login-register admin">
@@ -17,7 +18,7 @@
                     <h5 style="
                     padding: 2%;
                 ">Nuevo tour</h5>
-                    <form method="POST" action="/product/formulario" enctype="multipart/form-data" style="
+                    <form id="formulario" method="POST" action="/product/formulario" enctype="multipart/form-data" style="
                     padding: 3%;
                 ">
                         <label>Seleccionar una imagen para el tour:</label>
@@ -43,6 +44,9 @@
                             name="description"
                             placeholder="Descripcion del tour"
                             />
+                            <% if (locals.errors && errors.name) { %>
+                                <p  style="color: white"><%= errors.description.msg %></p>
+                                <% } %>   
                         <input
                             class="input-login"
                             type="tel"
@@ -61,12 +65,13 @@
                             <% if (locals.errors && errors.rate) { %>
                                 <p  style="color: white"><%= errors.rate.msg %></p>
                                 <% } %> 
-                                <select name="country" class="input-login">
-                                    <option disabled selected>Pais del tour</option>
-                                    <% paises.forEach( pais => { %>
-                                     <option> <%= pais.name %> </option>
-                                    <% }) %>
-                                </select>
+                                
+                                <input
+                                class="input-login"
+                                type="text"
+                                name="country"
+                                placeholder="País del tour"
+                                />        
                         <% if (locals.errors && errors.country) { %>
                         <p  style="color: white"><%= errors.country.msg %></p>
                         <% } %>  
@@ -96,6 +101,9 @@
                             name="price"
                             placeholder="Precio"
                             />
+                            <% if (locals.errors && errors.name) { %>
+                                <p  style="color: white"><%= errors.price.msg %></p>
+                                <% } %> 
                         <input
                             class="input-login"
                             type="number"

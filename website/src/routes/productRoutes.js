@@ -21,7 +21,7 @@ router.get("/asia", productController.asia)
 router.get("/europa", productController.europa)
 // Create product
 router.get("/formulario", productController.create)
-router.post("/formulario", fileUpload.single("image"), productController.store)
+router.post("/formulario", fileUpload.single("image"), productValidation, productController.store)
 
 // Edit product
 router.get("/edit" ,productController.showOptionsToEdit )

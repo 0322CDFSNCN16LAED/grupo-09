@@ -1,14 +1,13 @@
-const { body } = require('express-validator')
+const { check } = require('express-validator')
 
 module.exports = [
-    body('name').notEmpty().withMessage('Este campo debe estar completo.'),
-    body('description')
-        .notEmpty()
-        .withMessage('Este campo debe estar completo.'),
-    body('opinions').notEmpty().withMessage('Este campo debe estar completo.'),
-    body('rate').notEmpty().withMessage('Este campo debe estar completo.'),
-    body('city').notEmpty().withMessage('Este campo debe estar completo.'),
-    body('continent').notEmpty().withMessage('Este campo debe estar completo.'),
-    body('price').notEmpty().withMessage('Este campo debe estar completo.'),
-    body('discount').notEmpty().withMessage('Este campo debe estar completo.'),
+    check('name').notEmpty().withMessage('Este campo debe estar completo.'),
+    check('description').notEmpty().withMessage('Este campo debe estar completo.'),
+    check('opinions').notEmpty().withMessage('Este campo debe estar completo.'),
+    check('rate').notEmpty().withMessage('Este campo debe estar completo.'),
+    check('city').notEmpty().withMessage('Este campo debe estar completo.'),
+    check('continent').notEmpty().withMessage('Este campo debe estar completo.'),
+    check('price').notEmpty().withMessage('Este campo debe estar completo.'),
+    check('discount').notEmpty().withMessage('Este campo debe estar completo.'),
+    check('country').notEmpty().withMessage('Este campo debe estar completo.'),
 ]
