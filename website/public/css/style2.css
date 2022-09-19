@@ -1367,4 +1367,15 @@ main .product-description {
 .continents {
     filter: drop-shadow(3px 3px 8px rgb(97, 97, 97));
     margin-top: 40px;
+
+}
+
+.continents img:hover {
+box-shadow: 0 4px 8px 0 rgba(100, 85, 85, 0.2),
+0 6px 20px 0 rgb(100, 85, 85, 0.2);
+border-radius: 180px;
+}
+
+.toursuge {
+    margin-top: 50px;
 }
