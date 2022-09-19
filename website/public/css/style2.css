@@ -402,7 +402,7 @@ html {
 }
 
 .headerColor {
-    background-color: #e9e9e9;
+    background-color: #009459;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 5px;
 }
@@ -851,6 +851,12 @@ h1 {
 
 .carousel-index {
     margin-top: 78px;
+}
+
+@media (min-width: 900px) {
+.carousel-index {
+    margin-top: -168px;
+}
 }
 
 @media (max-width: 770px) {
@@ -1360,4 +1366,5 @@ main .product-description {
 
 .continents {
     filter: drop-shadow(3px 3px 8px rgb(97, 97, 97));
+    margin-top: 40px;
 }
