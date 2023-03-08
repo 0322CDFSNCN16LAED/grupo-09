@@ -23,10 +23,8 @@ Atajos: <a href="https://github.com/0322CDFSNCN16LAED/grupo-09#-descripci%C3%B3n
 
    <h2> ¿Quiénes somos? </h2>
 
--   Nicolas Horche : Tengo 28 años, estaba estudiando marketing y ahora me decidi por la programacion. Me gustan los animales y hacer deporte.
 -   Pato Villanueva : Me llamo Patricio pero me dicen Pato. Trabajo como freelancer para agencias de publicidad con el armado de banners html5, videos e imgs para rrss, diseño/ maquetado de mailings.
     Tengo una bebe de 11 meses y hago crossfit para no estar todo el dia en la compu.
--   Camila Vicente : Mi nombre es Cami, tengo 28 años, estudio la Lic en RRPP y soy fan de mi sobrino. Creo en un mundo 100% digital y quiero ser parte de esa transición.
 -   Mateo Quotteri : 17 años, disfruto mucho ir al gimnasio y jugar o mirar futbol. Me considero un entusiasta de la tecnologia(sobre todo blockchain) y creo en un futuro descentralizado.
 -   Gerardo Consiglio: Mi nombre es Gerardo pero todo el mundo me llama por mi segundo nombre, que es Martín. Tengo 31 años y un bebé de 5 meses que vino a darnos mucho amor. Soy un programador oxidado intentando volver de a poco al código. Estoy además en el último año de la carrera de Psicología. Mi profesión actual es más bién técnica, ya que me decico a la implementación de sistemas electrónicos de seguridad.
 -   Tomás Aristimuño : Tengo 22 años trabajo como cobrador para una fábrica de quesos y desde fines del 2021 empecé a estudiar programación, en este sitio web es donde voy a aplicar todos mis conocimientos obtenidos hasta la fecha.
